@@ -4,7 +4,10 @@ const FOOTER = () => {
   return (
     <>
       <footer className="mt-4">
-        <p>&copy; 2024 Mi Sitio Web</p>
+        <span>&copy; 2024 AUTOPARTSHOP </span>
+        <span>
+          desarrollado por <a href="/#">Hector Hernández</a>
+        </span>
       </footer>
     </>
   );
