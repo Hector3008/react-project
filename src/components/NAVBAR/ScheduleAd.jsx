@@ -1,20 +1,20 @@
 import React from 'react'
 import "./ScheduleAd.css"
-
+import "./Navbar__Form.css"
 const ScheduleAd = () => {
   let Schedules = [
     {
       Name: "Almacén principal",
-      location: "av. Iquitos 1221, La Victoria",
-      schedule: "09:00-17:00hrs (lun-vie) / 09:00-13:00hrs (sab)",
+      location: "AV. IQUITOS 1221, (LA VICTORIA)",
+      schedule: "09:00-17:00HRS (LUN-VIE) / 09:00-13:00HRS (SAB)",
     },
   ];
   return (
-    <div className="schedule-container">
+    <div className="schedule-container hide-on-lg">
       {Schedules.map((Element, index) => (
         <div className="schedule-item" key={index}>
-          <span className="location">{Element.location}</span>
-          <span className="schedule">{Element.schedule}</span>
+        
+          <span className="schedule">{Element.schedule} - {Element.location}</span>
         </div>
       ))}
     </div>

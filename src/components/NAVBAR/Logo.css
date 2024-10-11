@@ -1,12 +1,1 @@
-.logo {
-  color: rgb(255, 244, 184);
-  transition: all 0.1s ease-in-out;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-.logo:hover {
-  color: rgb(245, 245, 245);
-  text-shadow: 2px 2px 4px rgba(138, 138, 138, 0.5);
-  cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}

@@ -1,64 +1,122 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import Navbar__Form from "./Navbar__Form";
+import ScheduleAd from "./ScheduleAd";
 import { Nav, NavDropdown } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Logo from "./Logo";
 
-import "./NAVBAR.css";
-const NAVBAR = () => {
+import "./Navbar.css";
+import "./Navbar__Form.css"
+const Navbar__2 = () => {
   return (
     <>
-      <Navbar data-bs-theme="dark" expand="lg" className="navbar-custom">
-        <div className="navbar-header navbar-upper-row">
-          <Navbar.Brand href="#home" className="logo">
-            <Logo />
-          </Navbar.Brand>
-          <div className="navbar-header-form">
-            <Form inline className="search-form">
-              <InputGroup>
-                <InputGroup.Text id="basic-addon1"></InputGroup.Text>
-                <Form.Control
-                  placeholder="Búsqueda"
-                  aria-label="Búsqueda"
-                  aria-describedby="basic-addon1"
-                  className="search-input"
-                />
-              </InputGroup>
-            </Form>
-          </div>
-          <div className="navbar-header-right-area"></div>
-        </div>
+      <div className="Navbar__Container">
+        <ScheduleAd></ScheduleAd>
+        <Navbar expand="lg" className=" Navbar__Primary__Container">
+          <Container>
+            <Navbar.Brand href="#home">
+              <img
+                className=""
+                src="/img/Logo.webp"
+              ></img>
+            </Navbar.Brand>
 
-        <div className="navbar-toggle-row">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        </div>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <div className="navbar-wider">
-          <Navbar.Collapse id="responsive-navbar-nav" className="navbar-links">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Nosotros</Nav.Link>
-              <NavDropdown title="Catalogo" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.2">
-                  Arrancadores
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Alternadores
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Componentes
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Otros</NavDropdown.Item>
-              </NavDropdown>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar__Form></Navbar__Form>
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#CATALOGO/ARRANCADORES"
+              >
+                ARRANCADORES
+              </Nav.Link>
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#CATALOGO/ALTERNADORES"
+              >
+                ALTERNADORES
+              </Nav.Link>
+              <Nav.Link className="tab show-on-lg" href="#CATALOGO/COMPONENTES">
+                COMPONENTES
+              </Nav.Link>
+              <Nav.Link className="tab show-on-lg" href="#CATALOGO/OTROS">
+                OTROS
+              </Nav.Link>
+              <Nav.Link className="tab show-on-lg" href="#NOSOTROS">
+                NOSOTROS
+              </Nav.Link>
 
-              <Nav.Link href="#pricing">Contacto</Nav.Link>
+              <Nav.Link className="tab show-on-lg" href="#CONTACTO">
+                CONTACTO
+              </Nav.Link>
+              <Nav.Link className="tab show-on-lg" href="#BLOG">
+                BLOG
+              </Nav.Link>
+              <Nav.Link className="tab show-on-lg" href="#PREGUNTAS-FRECUENTES">
+                PREGUNTAS FRECUENTES
+              </Nav.Link>
+
+              <Nav className="me-3">
+                <NavDropdown
+                  title="CATALOGO"
+                  id="basic-nav-dropdown"
+                  className="catalogo__dropdown hide-on-lg"
+                  href="#CATALOGO"
+                >
+                  <NavDropdown.Item
+                    href="#CATALOGO/ARRANCADORES"
+                    className="custom-dropdown-item"
+                  >
+                    ARRANCADORES
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item
+                    href="#CATALOGO/ALTERNADORES"
+                    className="dropdown-item"
+                  >
+                    ALTERNADORES
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href="#CATALOGO/COMPONENTES"
+                    className="dropdown-item"
+                  >
+                    COMPONENTES
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item
+                    href="#CATALOGO/OTROS"
+                    className="dropdown-item"
+                  >
+                    OTROS
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+        <div className="bg-light">
+          <Container fluid className="Navbar__Secondary__Container">
+            <Nav className="justify-content-center">
+              <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
+                NOSOTROS
+              </Nav.Link>
+              <Nav.Link className="tab hide-on-lg" href="#CONTACTO">
+                CONTACTO
+              </Nav.Link>
+              <Nav.Link className="tab hide-on-lg" href="#BLOG">
+                BLOG
+              </Nav.Link>
+              <Nav.Link className="tab hide-on-lg" href="#PREGUNTAS FRECUENTES">
+                PREGUNTAS FRECUENTES
+              </Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+          </Container>
         </div>
-      </Navbar>
+      </div>
     </>
   );
 };
 
-export default NAVBAR;
+export default Navbar__2;

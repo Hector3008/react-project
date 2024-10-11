@@ -1,0 +1,44 @@
+.Navbar__Primary__Container .form-control {
+  color: black;
+  font-size: 0.7rem;
+}
+.hide-on-lg{
+  display: inline;
+}
+.form-container {
+  border: 1px solid rgb(56, 56, 56);
+  height: 1.8rem;
+  padding: 0%;
+}
+
+.Navbar__Primary__Container .form__button {
+  border-radius: 0%;
+  border: 0px
+}
+
+.Navbar__Primary__Container .form__placeholder {
+  border-radius: 0%;
+  padding: 3%;
+  width: 12rem;
+}
+
+.show-on-lg {
+  display: none !important;
+}
+.Navbar__Primary__Container .form-control::placeholder {
+  color: #00000076;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 992px) {
+  .hide-on-lg {
+    display: none !important;
+  }
+.show-on-lg {
+  display: list-item !important;
+}
+.catalogo__dropdown{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+}
