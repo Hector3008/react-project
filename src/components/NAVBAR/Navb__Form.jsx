@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import "./Navbar__Form.css"
+import "./Navb__Form.css"
 
 const Navbar__Form = () => {
   return (
@@ -13,7 +13,7 @@ const Navbar__Form = () => {
         aria-label="Search"
       />
       <Button variant="outline-success" className="form__button">
-        <img src="/img/search__icon.svg" alt="search__icon.svg" />
+        <img src="/img/search__icon.svg" className='icon' alt="search__icon.svg" />
       </Button>
     </Form>
   );

@@ -1,32 +1,30 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Navbar__Form from "./Navbar__Form";
+import Navb__Form from "./Navb__Form";
 import ScheduleAd from "./ScheduleAd";
 import { Nav, NavDropdown } from "react-bootstrap";
 
-import "./Navbar.css";
-import "./Navbar__Form.css"
-const Navbar__2 = () => {
+import "./Navb.css";
+import "./Navb__Form.css"
+const Navb = () => {
   return (
     <>
-      <div className="Navbar__Container">
+      <div className="Navb__Container">
         <ScheduleAd></ScheduleAd>
-        <Navbar expand="lg" className=" Navbar__Primary__Container">
+        <Navbar expand="lg" className=" Navb__Primary__Container">
           <Container>
             <Navbar.Brand href="#home">
-              <img
-                className=""
-                src="/img/Logo.webp"
-              ></img>
+              <img className="logo" src="/img/Logo.webp"></img>
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle aria-controls="basic-Navb-nav" />
 
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Navbar__Form></Navbar__Form>
+            <Navbar.Collapse id="basic-Navb-nav">
+              <Navb__Form></Navb__Form>
               <Nav.Link
                 className="tab show-on-lg"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
                 href="#CATALOGO/ARRANCADORES"
               >
                 ARRANCADORES
@@ -34,26 +32,51 @@ const Navbar__2 = () => {
               <Nav.Link
                 className="tab show-on-lg"
                 href="#CATALOGO/ALTERNADORES"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
               >
                 ALTERNADORES
               </Nav.Link>
-              <Nav.Link className="tab show-on-lg" href="#CATALOGO/COMPONENTES">
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#CATALOGO/COMPONENTES"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+              >
                 COMPONENTES
               </Nav.Link>
-              <Nav.Link className="tab show-on-lg" href="#CATALOGO/OTROS">
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#CATALOGO/OTROS"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+              >
                 OTROS
               </Nav.Link>
-              <Nav.Link className="tab show-on-lg" href="#NOSOTROS">
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#NOSOTROS"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+              >
                 NOSOTROS
               </Nav.Link>
 
-              <Nav.Link className="tab show-on-lg" href="#CONTACTO">
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#CONTACTO"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+              >
                 CONTACTO
               </Nav.Link>
-              <Nav.Link className="tab show-on-lg" href="#BLOG">
+              <Nav.Link
+                className="tab show-on-lg"
+                href="#BLOG"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+              >
                 BLOG
               </Nav.Link>
-              <Nav.Link className="tab show-on-lg" href="#PREGUNTAS-FRECUENTES">
+              <Nav.Link
+                className="tab show-on-lg "
+                href="#PREGUNTAS-FRECUENTES"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+              >
                 PREGUNTAS FRECUENTES
               </Nav.Link>
 
@@ -96,8 +119,8 @@ const Navbar__2 = () => {
           </Container>
         </Navbar>
 
-        <div className="bg-light">
-          <Container fluid className="Navbar__Secondary__Container">
+        <div>
+          <Container fluid className="Navb__Secondary__Container">
             <Nav className="justify-content-center">
               <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
                 NOSOTROS
@@ -119,4 +142,4 @@ const Navbar__2 = () => {
   );
 };
 
-export default Navbar__2;
+export default Navb;

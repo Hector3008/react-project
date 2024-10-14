@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ScheduleAd.css"
-import "./Navbar__Form.css"
+import "./Navb__Form.css"
 const ScheduleAd = () => {
   let Schedules = [
     {
