@@ -21,6 +21,13 @@ const Navb = () => {
             <Navbar.Toggle aria-controls="basic-Navb-nav" />
 
             <Navbar.Collapse id="basic-Navb-nav">
+              <Nav.Link
+                className="tab"
+                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                href="#CATALOGO/ARRANCADORES"
+              >
+                ENVIAR FOTO
+              </Nav.Link>
               <Navb__Form></Navb__Form>
               <Nav.Link
                 className="tab show-on-lg"
@@ -65,13 +72,7 @@ const Navb = () => {
               >
                 CONTACTO
               </Nav.Link>
-              <Nav.Link
-                className="tab show-on-lg"
-                href="#BLOG"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
-              >
-                BLOG
-              </Nav.Link>
+
               <Nav.Link
                 className="tab show-on-lg "
                 href="#PREGUNTAS-FRECUENTES"
@@ -128,11 +129,8 @@ const Navb = () => {
               <Nav.Link className="tab hide-on-lg" href="#CONTACTO">
                 CONTACTO
               </Nav.Link>
-              <Nav.Link className="tab hide-on-lg" href="#BLOG">
-                BLOG
-              </Nav.Link>
               <Nav.Link className="tab hide-on-lg" href="#PREGUNTAS FRECUENTES">
-                PREGUNTAS FRECUENTES
+                RPF
               </Nav.Link>
             </Nav>
           </Container>

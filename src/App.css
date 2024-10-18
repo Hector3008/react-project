@@ -1,19 +1,19 @@
 #root {
-  width: 100%
+  width: 100%;
+  background-color: rgb(243, 243, 243);
 }
 
-html,
-html,
-
-body {
+html, body {
   margin: 0;
   padding: 0;
+  background-color: rgb(243, 243, 243);;
+}
+.main-content {
+  flex-grow: 1;min-height: 500px; display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.testing {margin: auto;
-  min-height: 50px;
-  position: fixed;
-}
 .logo {
   height: 3em;
   padding: 1.5em;

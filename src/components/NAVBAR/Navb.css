@@ -1,15 +1,12 @@
 .Navb__Container {
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1000;
   width: 100%;
-
 }
 
 .Navb__Primary__Container {
-  background-color: rgb(243, 243, 243);
+  background-color: #f3f3f3;
   width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }

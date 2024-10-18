@@ -1,0 +1,58 @@
+
+
+.carousel-item {
+  height: 23rem;
+  /* Asegura que ocupe toda la altura del contenedor */
+  display: flex;
+  /* Asegura que el contenido se centre adecuadamente */
+  align-items: center;
+  /* Centra verticalmente */
+  background-size: cover;
+  /* Cubre todo el área */
+  background-position: center;
+  /* Centra la imagen */
+
+  /* Evita que la imagen se repita */
+}
+
+
+/* Imágenes locales de fondo */
+.local-img-1 {
+  background-image: url("/img/main__slider/20.png");
+}
+
+.local-img-2 {
+  background-image: url("/img/main__slider/20.png");
+}
+
+.local-img-3 {
+  background-image: url("/img/main__slider/20.png");
+}
+
+@media (max-width: 575px) {
+  .carousel-item {
+    height: 15rem;
+    /* Reduce la altura para pantallas pequeñas */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .carousel-item {
+    height: 20rem;
+    /* Ajusta la altura para tabletas verticales */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-item {
+    height: 22rem;
+    /* Ajusta la altura para tabletas horizontales */
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-item {
+    height: 23rem;
+    /* Altura completa para pantallas grandes */
+  }
+}

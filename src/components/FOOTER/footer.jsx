@@ -19,15 +19,19 @@ const FOOTER = () => {
               <h5 className="title">ENLACES DE INTERÉS</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a className="link"  href="/about">
+                  <a className="link" href="/about">
                     NOSOTROS
                   </a>
                 </li>
                 <li>
-                  <a className='link'  href="/services">SERVICIOS</a>
+                  <a className="link" href="/services">
+                    SERVICIOS
+                  </a>
                 </li>
                 <li>
-                  <a className='link' href="/contact">CONTACTO</a>
+                  <a className="link" href="/contact">
+                    CONTACTO
+                  </a>
                 </li>
               </ul>
             </Col>
@@ -54,10 +58,15 @@ const FOOTER = () => {
           </Row>
           <Row className="bottom pt-3">
             <Col md={4} className="text-center item">
-              <p>&copy; 2024 AUTOPART SHOP E I R L.</p>
+              <p className="sub">
+                &copy; 2024{" "}
+                <strong className="to">AUTOPART SHOP E I R L.</strong>
+              </p>
             </Col>
-            <Col md={4} className="text-center item">
-              <p>DESARROLLADO POR HECTOR HERNANDEZ</p>
+            <Col md={4} className="text-center item sub">
+              <p>
+                DESARROLLADO POR <strong className='to'>HECTOR HERNANDEZ</strong>
+              </p>
             </Col>
           </Row>
         </Container>
