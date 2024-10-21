@@ -4,11 +4,11 @@
 }
 
 .Navb__Primary__Container {
-  background-color: #f3f3f3;
+  background-color: #00443b;
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem 0rem 0.5rem 0rem;
 }
 
 .Navb__Primary__Container Nav.Link {
@@ -23,13 +23,34 @@
 .Navbar-toggler {
   margin: 0.5rem;
 }
-
+.navbar-collapse .show .tab{
+  background-color: #00443b;
+  
+}
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente el contenido */
+  justify-content: center;
+  /* Opcional: Alinea horizontalmente si es necesario */
+  height: 1.5rem;
+  /* Asegúrate de que haya suficiente altura para centrar el ícono */
+  width: 1.5rem;
+  color: white;
+  border-color: white;
+  border-style: groove;
+}
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  /* Esto reemplaza el SVG por defecto negro con uno blanco */
+}
 .Navb__Secondary__Container {
   margin: 0%;
   padding: 0%;
 }
 
-.Navb__Primary__Container .nav-link,
+
+.consultar-con-foto:hover{background-color: rgba(255, 68, 0, 0.872); color: white;}
 
 .Navb__Primary__Container .dropdown-toggle{
   color: rgb(255, 255, 255) !important;
@@ -48,7 +69,7 @@
   overflow-y: auto;
   color: rgba(3, 0, 0, 0.485) !important;
   font-size: 0.6rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .Navb__Primary__Container .dropdown-toggle:hover {
@@ -57,7 +78,8 @@
 }
 
 .Navb__Primary__Container .dropdown-menu {
-  background-color: rgb(243, 243, 243) !important;
+  background-color: #00443b !important;
+  color: beige;
   border-radius: 0px;
   border-top: 0px;
   max-height: 400px;
@@ -66,7 +88,7 @@
 
 /* Estilos para los ítems del dropdown */
 .Navb__Primary__Container .dropdown-item {
-  color: rgba(3, 0, 0, 0.485) !important;
+  color: azure !important;
   font-size: 0.6rem;
 
   font-weight: normal;
@@ -95,8 +117,8 @@
 }
 
 .Navb__Secondary__Container .tab {
-  color: rgba(1, 1, 1, 0.588);
-  font-weight: normal;
+  color: rgb(1, 1, 1);
+  font-weight: bold;
   font-size: 0.7rem;
 }
 
@@ -105,7 +127,7 @@
 }
 
 .logo {
-  padding: 0%
+  padding: 0%;
 }
 
 .dropdown-item {
@@ -143,5 +165,20 @@
     height: 1rem;
     width: 1rem;
   }
- 
+}
+
+
+@media (max-width: 575px) {
+  .Navb__Container {
+    padding-top: 0%;
+    height: auto;
+    /* Ajuste para pantallas pequeñas */
+  }
+
+  .Navb__Primary__Container {
+    padding: 0.2rem 0rem 0.2rem 0rem;
+  }
+    .navbar-toggler{height: 1rem;width: 1rem;}
+    .navbar-toggler-icon{height: 0.4rem;
+      width: 0.4rem;}
 }

@@ -1,0 +1,51 @@
+.consultar-con-foto {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: rgba(79, 189, 83, 0.872);
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 575px) {
+  .consultar-con-foto {
+    margin-left: 0rem;
+      margin-right: 0rem;
+    height: 1rem;
+    width: 0.4rem;
+    border-radius: 0.2rem;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centrar horizontal y verticalmente */
+  }
+
+  .bi-camera {
+    padding: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .consultar-con-foto {
+    height: 1.5rem;
+    width: 1.5rem;
+    /* Asegúrate de ajustar también el ancho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .consultar-con-foto {
+    height: 1.5rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bi-camera{height: auto;}
+}

@@ -1,0 +1,25 @@
+.users{
+  font-size: 0.8rem;
+  color: "white";
+      list-style: "none",
+}
+
+@media (max-width: 575px) {
+  .users {
+    font-size: 0.3rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .users {
+    font-size: 0.7rem;
+    /* Ajuste para pantallas de tamaño mediano */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+   .users{
+    font-size: 0.8rem;
+    /* Ajuste para pantallas más grandes */
+  }
+}

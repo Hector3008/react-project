@@ -2,8 +2,8 @@
   color: black;
   font-size: 0.7rem;
 }
-.icon{
-  filter: brightness(0) invert(1)
+.bi-search{
+  color: white;
 }
 
 .hide-on-lg{
@@ -11,14 +11,19 @@
 }
 .form-container {
   height: 1.8rem;
+  width: 15rem;
   padding: 0%;
+  border-radius: 0px;
 }
 
 .Navbar__Primary__Container .form__button {
   border-radius: 0%;
   border: 0px
 }
-
+.btn-outline-success{
+  border: 0px;
+  margin-left: 1rem;
+}
 .Navbar__Primary__Container .form__placeholder {
   border-radius: 0%;
   padding: 3%;

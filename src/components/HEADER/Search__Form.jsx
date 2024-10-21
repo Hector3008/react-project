@@ -1,9 +1,11 @@
 import React from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import "./Navb__Form.css"
+import "./Search__Form.css";
 
-const Navbar__Form = () => {
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+const Search__Form = () => {
   return (
     <Form className="d-flex ms-auto form-container hide-on-lg">
       <Form.Control
@@ -13,10 +15,10 @@ const Navbar__Form = () => {
         aria-label="Search"
       />
       <Button variant="outline-success" className="form__button">
-        <img src="/img/search__icon.svg" className='icon' alt="search__icon.svg" />
+        <i class="bi bi-search"></i>{" "}
       </Button>
     </Form>
   );
 }
 
-export default Navbar__Form;
+export default Search__Form;

@@ -1,84 +1,140 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Navb__Form from "./Navb__Form";
+import Search__Form from "./Search__Form"; 
+import ConsultarConFoto from "./Links/ConsultarConFoto";
 import ScheduleAd from "./ScheduleAd";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { Nav, NavDropdown } from "react-bootstrap";
+import Logo from "./Logo";
+import "./Header.css";
+import "./Search__Form.css";
+import Users from "./Links/Users";
 
-import "./Navb.css";
-import "./Navb__Form.css"
-const Navb = () => {
+const Header = () => {
   return (
     <>
-      <div className="Navb__Container">
+      <header className="Navb__Container">
         <ScheduleAd></ScheduleAd>
         <Navbar expand="lg" className=" Navb__Primary__Container">
           <Container>
-            <Navbar.Brand href="#home">
-              <img className="logo" src="/img/Logo.webp"></img>
-            </Navbar.Brand>
-
+            <Logo />
+            <ConsultarConFoto />
+            <Search__Form />
+            <Users clases={"show-on-lg"}/>
             <Navbar.Toggle aria-controls="basic-Navb-nav" />
 
             <Navbar.Collapse id="basic-Navb-nav">
               <Nav.Link
-                className="tab"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                className="show-on-lg"
                 href="#CATALOGO/ARRANCADORES"
-              >
-                ENVIAR FOTO
-              </Nav.Link>
-              <Navb__Form></Navb__Form>
-              <Nav.Link
-                className="tab show-on-lg"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
-                href="#CATALOGO/ARRANCADORES"
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 ARRANCADORES
               </Nav.Link>
               <Nav.Link
-                className="tab show-on-lg"
+                className="show-on-lg"
                 href="#CATALOGO/ALTERNADORES"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 ALTERNADORES
               </Nav.Link>
               <Nav.Link
-                className="tab show-on-lg"
+                className="show-on-lg"
                 href="#CATALOGO/COMPONENTES"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 COMPONENTES
               </Nav.Link>
               <Nav.Link
-                className="tab show-on-lg"
+                className="show-on-lg"
                 href="#CATALOGO/OTROS"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 OTROS
               </Nav.Link>
               <Nav.Link
-                className="tab show-on-lg"
+                className="show-on-lg"
                 href="#NOSOTROS"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 NOSOTROS
               </Nav.Link>
 
               <Nav.Link
-                className="tab show-on-lg"
+                className="show-on-lg"
                 href="#CONTACTO"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 CONTACTO
               </Nav.Link>
 
               <Nav.Link
-                className="tab show-on-lg "
+                className="show-on-lg "
                 href="#PREGUNTAS-FRECUENTES"
-                style={{ backgroundColor: "rgb(243, 243, 243)" }}
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
               >
                 PREGUNTAS FRECUENTES
+              </Nav.Link>
+
+              <Nav.Link
+                className="show-on-lg"
+                href="#NOSOTROS"
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
+              >
+                SOPORTE
+              </Nav.Link>
+              <Nav.Link
+                className="show-on-lg"
+                href="#NOSOTROS"
+                style={{
+                  backgroundColor: "#00443b",
+                  color: "white",
+                  textDecoration: "none",
+                  listStyle: "none",
+                }}
+              >
+                REPORTES
               </Nav.Link>
 
               <Nav className="me-3">
@@ -117,6 +173,7 @@ const Navb = () => {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
+            <Users clases={"hide-on-lg"}/>
           </Container>
         </Navbar>
 
@@ -129,15 +186,21 @@ const Navb = () => {
               <Nav.Link className="tab hide-on-lg" href="#CONTACTO">
                 CONTACTO
               </Nav.Link>
+              <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
+                SOPORTE
+              </Nav.Link>
+              <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
+                REPORTES
+              </Nav.Link>
               <Nav.Link className="tab hide-on-lg" href="#PREGUNTAS FRECUENTES">
                 RPF
               </Nav.Link>
             </Nav>
           </Container>
         </div>
-      </div>
+      </header>
     </>
   );
 };
 
-export default Navb;
+export default Header;
