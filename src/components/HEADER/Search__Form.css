@@ -1,6 +1,6 @@
-.Navbar__Primary__Container .form-control {
+.Naftware .form-control {
   color: black;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .bi-search{
   color: white;
@@ -11,21 +11,20 @@
 }
 .form-container {
   height: 1.8rem;
-  width: 15rem;
+  width: 18rem;
   padding: 0%;
-  border-radius: 0px;
 }
 
-.Navbar__Primary__Container .form__button {
-  border-radius: 0%;
+.Naftware .form__button {
+  border-radius: 0.2rem;
   border: 0px
 }
 .btn-outline-success{
   border: 0px;
   margin-left: 1rem;
 }
-.Navbar__Primary__Container .form__placeholder {
-  border-radius: 0%;
+.Naftware .form__placeholder {
+  border-radius: 0.2rem;
   padding: 3%;
   width: 12rem;
 }
@@ -33,7 +32,7 @@
 .show-on-lg {
   display: none !important;
 }
-.Navbar__Primary__Container .form-control::placeholder {
+.Naftware .form-control::placeholder {
   color: #00000076;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

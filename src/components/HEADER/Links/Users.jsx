@@ -6,10 +6,7 @@ const Users = ({clases}) => {
     <Nav.Link
       className={`${clases} users`}
       href="#PREGUNTAS-FRECUENTES"
-      style={{
-        color: "white",
-        listStyle: "none",
-      }}
+      
     >
       LOGIN/REGISTER
     </Nav.Link>

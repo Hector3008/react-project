@@ -1,0 +1,75 @@
+.slider-item {
+  height: 23rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slider-item.first {
+  background-image: url("/img/Presentacion/1.png");
+}
+
+.slider-item.second {
+  background-image: url("/img/Presentacion/2.png");
+}
+
+.slider-item.third {
+  background-image: url("/img/Presentacion/3.png");
+}
+
+
+@media  (max-width: 575px) {
+  .slider-item {
+    height: 15rem;
+  }
+    .slider-item.first {
+      background-image: url("/img/Presentacion/10.png");
+    }
+  
+    .slider-item.second {
+      background-image: url("/img/Presentacion/11.png");
+    }
+  
+    .slider-item.third {
+      background-image: url("/img/Presentacion/12.png");
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .slider-item {
+    height: 20rem;
+  }
+    .slider-item.first {
+      background-image: url("/img/Presentacion/7.png");
+    }
+  
+    .slider-item.second {
+      background-image: url("/img/Presentacion/8.png");
+    }
+  
+    .slider-item.third {
+      background-image: url("/img/Presentacion/9.png");
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .slider-item {
+    height: 22rem;
+  }
+    .slider-item.first {
+      background-image: url("/img/Presentacion/4.png");
+    }
+  
+    .slider-item.second {
+      background-image: url("/img/Presentacion/5.png");
+    }
+  
+    .slider-item.third {
+      background-image: url("/img/Presentacion/6.png");
+    }
+}
+
+@media (min-width: 992px) {
+  .slider-item {
+    height: 23rem;
+  }
+}

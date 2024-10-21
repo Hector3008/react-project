@@ -14,9 +14,9 @@ import Users from "./Links/Users";
 const Header = () => {
   return (
     <>
-      <header className="Navb__Container">
+      <header className="Header__Container">
         <ScheduleAd></ScheduleAd>
-        <Navbar expand="lg" className=" Navb__Primary__Container">
+        <Navbar expand="lg" className=" Naftware">
           <Container>
             <Logo />
             <ConsultarConFoto />
@@ -178,7 +178,7 @@ const Header = () => {
         </Navbar>
 
         <div>
-          <Container fluid className="Navb__Secondary__Container">
+          <Container fluid className="Navbar">
             <Nav className="justify-content-center">
               <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
                 NOSOTROS

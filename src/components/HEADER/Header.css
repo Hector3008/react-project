@@ -1,9 +1,9 @@
-.Navb__Container {
+.Header__Container {
   z-index: 1000;
   width: 100%;
 }
 
-.Navb__Primary__Container {
+.Naftware {
   background-color: #00443b;
   width: 100%;
   height: auto;
@@ -11,7 +11,7 @@
   padding: 0.5rem 0rem 0.5rem 0rem;
 }
 
-.Navb__Primary__Container Nav.Link {
+.Naftware Nav.Link {
   color: white;
 }
 
@@ -44,7 +44,7 @@
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
   /* Esto reemplaza el SVG por defecto negro con uno blanco */
 }
-.Navb__Secondary__Container {
+.Navbar {
   margin: 0%;
   padding: 0%;
 }
@@ -52,9 +52,10 @@
 
 .consultar-con-foto:hover{background-color: rgba(255, 68, 0, 0.872); color: white;}
 
-.Navb__Primary__Container .dropdown-toggle{
+.Naftware .dropdown-toggle{
   color: rgb(255, 255, 255) !important;
   background-color: rgba(79, 189, 83, 0.872);
+  border-radius: 0.2rem;
   height: auto;
   margin-left: 1rem;
   font-weight: bold;
@@ -62,7 +63,7 @@
   font-size: 0.8rem;
 }
 
-.Navb__Primary__Container .tab {
+.Naftware .tab {
   border-radius: 0px;
   border: 0px;
   max-height: 400px;
@@ -72,12 +73,12 @@
   font-weight: bold;
 }
 
-.Navb__Primary__Container .dropdown-toggle:hover {
+.Naftware .dropdown-toggle:hover {
   background-color: rgba(255, 68, 0, 0.872);
   transition-duration: 0.3s;
 }
 
-.Navb__Primary__Container .dropdown-menu {
+.Naftware .dropdown-menu {
   background-color: #00443b !important;
   color: beige;
   border-radius: 0px;
@@ -87,42 +88,42 @@
 }
 
 /* Estilos para los ítems del dropdown */
-.Navb__Primary__Container .dropdown-item {
+.Naftware .dropdown-item {
   color: azure !important;
   font-size: 0.6rem;
 
   font-weight: normal;
 }
 
-.Navb__Primary__Container .dropdown-item:hover {
+.Naftware .dropdown-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: black !important;
 }
 
-.Navb__Primary__Container .btn-outline-success {
+.Naftware .btn-outline-success {
   background-color: rgba(79, 189, 83, 0.872);
   border-color: white;
   padding: 1% 3%;
 }
 
-.Navb__Primary__Container .btn-outline-success:hover {
+.Naftware .btn-outline-success:hover {
   background-color: rgba(255, 68, 0, 0.872);
   color: rgb(255, 255, 255);
 }
 
-.Navb__Secondary__Container {
+.Navbar {
 
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.108);
 
 }
 
-.Navb__Secondary__Container .tab {
+.Navbar .tab {
   color: rgb(1, 1, 1);
   font-weight: bold;
   font-size: 0.7rem;
 }
 
-.Navb__Secondary__Container .tab:hover {
+.Navbar .tab:hover {
   color: #ff8c00 !important;
 }
 
@@ -151,7 +152,7 @@
     margin-top: 1rem;
   }
 
-  .Navb__Primary__Container {
+  .Naftware {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.108);
   }
 
@@ -169,13 +170,13 @@
 
 
 @media (max-width: 575px) {
-  .Navb__Container {
+  .Header__Container {
     padding-top: 0%;
     height: auto;
     /* Ajuste para pantallas pequeñas */
   }
 
-  .Navb__Primary__Container {
+  .Naftware {
     padding: 0.2rem 0rem 0.2rem 0rem;
   }
     .navbar-toggler{height: 1rem;width: 1rem;}
