@@ -1,0 +1,120 @@
+.couriers-container{
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(22, 22, 22);
+}
+.couriers-carousel .bi{
+  color: #ff8c00;
+}
+.couriers-carousel .title {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  /* Aumenta un poco el tamaño para pantallas grandes */
+  margin: auto;
+  text-align: center;
+  /* Asegura que el texto esté centrado */
+  width: 100%;
+  /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .couriers-carousel .title {
+    font-size: 1rem;
+    /* Ajusta el tamaño de fuente para móviles */
+    margin-bottom: 1rem;
+    /* Reduce el margen inferior para ahorrar espacio */
+    white-space: normal;
+    /* Permite que el texto se divida en varias líneas si es necesario */
+    padding: 0 1rem;
+    /* Añade un poco de padding para que no se recorte en los bordes */
+  }
+}
+.react-multi-carousel-list{
+  margin: auto;
+  margin-top: 1rem;
+  width: 80%;
+}
+.couriers-carousel {
+  width: 80%;
+  margin: auto;
+  white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.logo-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+  
+}
+
+.logo-item {
+  display: inline-block;
+  width: 20%;
+  animation: slide 8s linear infinite;
+  opacity: 1;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  /* Hace que el logo sea completamente opaco al pasar el mouse */
+}
+
+.logo-item img:hover {
+  transition: 0.5s;
+  /* Aumenta el zoom al pasar el mouse, haciendo la animación más evidente */
+}
+
+.progress-bar-container {
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  height: 0.2rem;
+  width: 100%;
+}
+
+.progress-bar {
+  opacity: 0.5;
+  background: linear-gradient(90deg, #ff8c00, #4fbd53de);
+  height: 100%;
+  transition: width 0.1s linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-120%);
+    /* Mueve un poco más allá del último logo */
+  }
+}
+
+.logo-item {
+  animation: slide 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .couriers-carousel .title {
+    font-size: 1rem;
+     margin-bottom: 1rem;
+     white-space: normal;
+    padding: 0 1rem;
+   }
+}
