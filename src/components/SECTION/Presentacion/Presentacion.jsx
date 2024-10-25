@@ -13,7 +13,7 @@ const Presentacion = () => {
     <Carousel
       activeIndex={index}
       onSelect={handleSelect}
-      interval={5000}
+      interval={500000}
       className="slider"
     >
       <Carousel.Item className="slider-item first">

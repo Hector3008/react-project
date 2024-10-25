@@ -1,20 +1,46 @@
 .Header__Container {
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
+  z-index: 1050;
+  top: -100px;
+  transition: top 0.5s ease, opacity 2s ease, transform 2s ease;
+  opacity: 0;
+  transform: translateY(-50px);
+  /* Desplazado hacia arriba al inicio */
 }
-
+.catalogo__dropdown .scrolled {
+  z-index: 9999;
+  /* Asegura que el dropdown esté siempre visible */
+}
+.Header__Container.scrolled {
+  top: 0;
+  /* Se fija en la parte superior */
+  transform: translateY(0);
+  /* Regresa a su posición original */
+  opacity: 1;
+  position: fixed;
+  z-index: 10;
+}
+.Header__Container:not(.scrolled) {
+  transform: translateY(0);
+  opacity: 1;
+}
 .Naftware {
   background-color: #00443b;
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0.5rem 0rem 0.5rem 0rem;
+  position: relative;
+    z-index: 1001;
 }
 
 .Naftware Nav.Link {
   color: white;
 }
-
+.Navbar .navbar-collapse {
+  overflow: visible !important;
+}
 .Navb-collapse {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -47,13 +73,16 @@
 .Navbar {
   margin: 0%;
   padding: 0%;
+  background-color: #f3f3f3;
+  position: relative;
+    z-index: 1000;
 }
 
 
 .consultar-con-foto:hover{background-color: rgba(255, 68, 0, 0.872); color: white;}
 
 .Naftware .dropdown-toggle{
-  color: rgb(255, 255, 255) !important;
+  color: #ffffff !important;
   background-color: rgba(79, 189, 83, 0.872);
   border-radius: 0.2rem;
   height: auto;
@@ -79,12 +108,15 @@
 }
 
 .Naftware .dropdown-menu {
-  background-color: #00443b !important;
   color: beige;
   border-radius: 0px;
   border-top: 0px;
   max-height: 400px;
-  overflow-y: auto;
+overflow: visible !important;
+  position: absolute;
+    z-index: 9999 !important;
+    background-color: #00443b !important;
+
 }
 
 /* Estilos para los ítems del dropdown */

@@ -1,27 +1,56 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Search__Form from "./Search__Form"; 
+import Search__Form from "./Search__Form";
 import ConsultarConFoto from "./Links/ConsultarConFoto";
 import ScheduleAd from "./ScheduleAd";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { Nav, NavDropdown } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import Logo from "./Logo";
 import "./Header.css";
 import "./Search__Form.css";
 import Users from "./Links/Users";
+import { NavDropdown } from "react-bootstrap";
+import { forwardRef } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    // Guardar la altura del header
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight);
+    }
+
+    const handleScroll = () => {
+      if (window.scrollY > 190) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="Header__Container">
-        <ScheduleAd></ScheduleAd>
-        <Navbar expand="lg" className=" Naftware">
+      <div style={{ height: isScrolled ? `${headerHeight}px` : "0px" }} />
+      <header
+        className={`Header__Container ${isScrolled ? "scrolled" : ""}`}
+      >
+        <ScheduleAd/>
+        <Navbar expand="lg" className="Naftware">
           <Container>
             <Logo />
             <ConsultarConFoto />
             <Search__Form />
-            <Users clases={"show-on-lg"}/>
+            <Users clases={"show-on-lg"} />
             <Navbar.Toggle aria-controls="basic-Navb-nav" />
 
             <Navbar.Collapse id="basic-Navb-nav">
@@ -157,13 +186,16 @@ const Header = () => {
                   >
                     ALTERNADORES
                   </NavDropdown.Item>
+
                   <NavDropdown.Item
                     href="#CATALOGO/COMPONENTES"
                     className="dropdown-item"
                   >
                     COMPONENTES
                   </NavDropdown.Item>
+
                   <NavDropdown.Divider />
+
                   <NavDropdown.Item
                     href="#CATALOGO/OTROS"
                     className="dropdown-item"
@@ -173,31 +205,30 @@ const Header = () => {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <Users clases={"hide-on-lg"}/>
+            <Users clases={"hide-on-lg"} />
           </Container>
         </Navbar>
 
-        <div>
-          <Container fluid className="Navbar">
-            <Nav className="justify-content-center">
-              <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
-                NOSOTROS
-              </Nav.Link>
-              <Nav.Link className="tab hide-on-lg" href="#CONTACTO">
-                CONTACTO
-              </Nav.Link>
-              <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
-                SOPORTE
-              </Nav.Link>
-              <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
-                REPORTES
-              </Nav.Link>
-              <Nav.Link className="tab hide-on-lg" href="#PREGUNTAS FRECUENTES">
-                RPF
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </div>
+        {/* El contenedor que faltaba */}
+        <Container fluid className="Navbar">
+          <Nav className="justify-content-center">
+            <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
+              NOSOTROS
+            </Nav.Link>
+            <Nav.Link className="tab hide-on-lg" href="#CONTACTO">
+              CONTACTO
+            </Nav.Link>
+            <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
+              SOPORTE
+            </Nav.Link>
+            <Nav.Link className="tab hide-on-lg" href="#NOSOTROS">
+              REPORTES
+            </Nav.Link>
+            <Nav.Link className="tab hide-on-lg" href="#PREGUNTAS FRECUENTES">
+              RPF
+            </Nav.Link>
+          </Nav>
+        </Container>
       </header>
     </>
   );

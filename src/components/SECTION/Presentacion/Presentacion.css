@@ -1,8 +1,12 @@
+.slider{position: relative;
+  z-index: 1; overflow: visible;}
 .slider-item {
   height: 23rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1;
+
 }
 .slider-item.first {
   background-image: url("/img/Presentacion/1.png");
