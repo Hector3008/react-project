@@ -1,0 +1,9 @@
+.components__container{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.card__component{border: 1px solid black; width: 33%; margin: 0.5rem;}
+
+.components__card{height: 3rem; margin: 0.5rem;}

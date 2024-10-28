@@ -11,7 +11,6 @@ import "./Header.css";
 import "./Search__Form.css";
 import Users from "./Links/Users";
 import { NavDropdown } from "react-bootstrap";
-import { forwardRef } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

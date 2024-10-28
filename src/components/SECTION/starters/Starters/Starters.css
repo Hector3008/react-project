@@ -1,0 +1,8 @@
+.type1{
+  width: 100%;
+  height: 14rem;
+  border: 1px solid black;
+}
+
+.starters__container{display: flex; border: 1px solid black}
+.starter__container{margin: 0.5rem;}
