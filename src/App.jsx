@@ -3,16 +3,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/HEADER/Header";
 import FOOTER from "./components/footer/footer";
 import Landing from "./components/PAGES/Landing";
-import Starters__and__Componets from "./components/SECTION/starters/Starters__and__Componets";
+import Catalog__Container from "./components/PAGES/CATALOG/Catalog__Container";
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import ItemPage from "./components/PAGES/ItemPage";
 
 function App() {
   return (
-    
     <>
-      <Header />
-      <Landing />
-      <Starters__and__Componets />
-      <FOOTER />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/catalog" element={<Catalog__Container />} />
+          <Route path="/item/:itemID" element ={<ItemPage/>}/>
+          <Route path="*" element={<h3>seccion en construccion</h3>} />
+        </Routes>
+
+        <FOOTER />
+      </BrowserRouter>
     </>
   );
 }

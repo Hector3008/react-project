@@ -1,0 +1,10 @@
+.ItemCard{
+    width: 14rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    text-align: center;
+    background-color: orangered;
+}
+.cardImage{width: 10rem;}

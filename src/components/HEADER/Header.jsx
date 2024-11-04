@@ -11,6 +11,7 @@ import "./Header.css";
 import "./Search__Form.css";
 import Users from "./Links/Users";
 import { NavDropdown } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,13 +41,13 @@ const Header = () => {
   return (
     <>
       <div style={{ height: isScrolled ? `${headerHeight}px` : "0px" }} />
-      <header
-        className={`Header__Container ${isScrolled ? "scrolled" : ""}`}
-      >
-        <ScheduleAd/>
+      <header className={`Header__Container ${isScrolled ? "scrolled" : ""}`}>
+        <ScheduleAd />
         <Navbar expand="lg" className="Naftware">
           <Container>
-            <Logo />
+            <Link to={"/"}>
+              <Logo />
+            </Link>
             <ConsultarConFoto />
             <Search__Form />
             <Users clases={"show-on-lg"} />
