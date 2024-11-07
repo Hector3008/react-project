@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ST-Components = () => {
+const STComponents = () => {
   return (
     <div>ST-Components</div>
   )
 }
 
-export default ST-Components
+export default STComponents;

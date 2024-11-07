@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Alt-Components = () => {
+const ALTComponents = () => {
   return (
     <div>Alt-Components</div>
   )
 }
 
-export default Alt-Components
+export default ALTComponents;

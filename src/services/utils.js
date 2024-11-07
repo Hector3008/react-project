@@ -1,4 +1,4 @@
-import { productos, categories } from "../data"
+import { productos, categories, keywords, brands } from "../data"
 
 export function getElements(){
   return productos
@@ -16,3 +16,10 @@ export function getCategory(id){
   return e
 }
 
+export function getKeywords(){
+  return keywords
+}
+
+export function getBrands(){
+  return brands
+}

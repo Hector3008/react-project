@@ -1,6 +1,8 @@
-import React from 'react'
-import "./Item.css"
-const Item = ({id, title, categories, img }) => {
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Item.css";
+
+const Item = ({ id, title, categories, img, description, sku, thumbnails, onQuickView }) => {
   return (
     <div className="ItemCard">
       <img
@@ -12,12 +14,30 @@ const Item = ({id, title, categories, img }) => {
         }
         alt="img"
       />
-      <h6>{title}</h6>
+      <Link to={`/item/${id}`}>
+        <h6>{title}</h6>
+      </Link>
+
       <p>{id}</p>
-      <p>{categories[categories.length-1]}</p>
-      <p>vista rápida...</p>
+      <p>{categories[categories.length - 1]}</p>
+      <p
+        onClick={() =>
+          onQuickView({
+            id,
+            title,
+            categories,
+            img,
+            description,
+            thumbnails,
+            sku,
+          })
+        }
+        className="quick-view"
+      >
+        vista rápida...
+      </p>
     </div>
   );
-}
+};
 
-export default Item
+export default Item;

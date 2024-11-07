@@ -1,22 +1,33 @@
 export const componentes__de__arrancador = [
-  "tapas",
-  "solenoides",
-  "portacarbones",
-  "planetarios",
-  "horquillas",
-  "colectores",
-  "carbones",
-  "armaduras",
-  "bendix",
+  { title: "tapas",thumbnails:[], id: "5" },
+  { title: "solenoides",thumbnails:[], id: "6" },
+  { title: "portacarbones",thumbnails:[], id: "7" },
+  { title: "planetarios",thumbnails:[], id: "8" },
+  { title: "horquillas",thumbnails:[], id: "9" },
+  { title: "colectores",thumbnails:[], id: "10" },
+  { title: "carbones",thumbnails:[], id: "11" },
+  { title: "armaduras",thumbnails:[], id: "12" },
+  { title: "bendix",thumbnails:[], id: "13" },
 ];
-export const componentes__de__alternador =[
-  "tapas", "statores", "rotores", "relay","portadiodos","portacarbones","poleas","colectores","bombas de vacío"
-]
+export const componentes__de__alternador = [
+  { title: "tapas",thumbnails:[], id: "14" },
+  { title: "statores",thumbnails:[], id: "15" },
+  { title: "rotores",thumbnails:[], id: "16" },
+  { title: "relay",thumbnails:[], id: "17" },
+  { title: "portadiodos",thumbnails:[], id: "18" },
+  { title: "portacarbones",thumbnails:[], id: "19" },
+  { title: "poleas",thumbnails:[], id: "20" },
+  { title: "colectores",thumbnails:[], id: "21" },
+  { title: "bombas de vacío",thumbnails:[], id: "22" },
+];
 export const categories = [
-  "arrancadores",
-  "alternadores",
-  "componentes",
-  "otros",
+  {
+    title: "arrancadores",
+    id: "1",
+  },
+  { title: "alternadores",thumbnails:[], id: "2" },
+  { title: "componentes",thumbnails:[], id: "3" },
+  { title: "otros",thumbnails:[], id: "4" },
   componentes__de__alternador,
   componentes__de__arrancador,
 ];
@@ -454,4 +465,15 @@ export const productos = [
   },
 ];
 
+export const keywords = [
+  "12v",
+  "24v",
+  "vacio",
+  "bosch",
+  "oem",
+  "sku",
+  ];
 
+export const brands = [
+  "toyota", "ford", "chevrolet", "volvo","nissan", "mercedes", "otros"
+]
