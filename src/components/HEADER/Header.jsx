@@ -11,7 +11,8 @@ import "./Header.css";
 import "./Search__Form.css";
 import Users from "./Links/Users";
 import { NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Number from "./Number";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,6 +49,7 @@ const Header = () => {
             <Link to={"/"}>
               <Logo />
             </Link>
+            <Number/>
             <ConsultarConFoto />
             <Search__Form />
             <Users clases={"show-on-lg"} />

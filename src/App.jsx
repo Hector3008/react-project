@@ -6,7 +6,7 @@ import Landing from "./components/PAGES/Landing";
 import Catalog__Container from "./components/PAGES/CATALOG/Catalog__Container";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import ItemPage from "./components/PAGES/ItemPage";
-import { getCategories } from "./services/utils";
+import { context } from "./context/context";
 
 function App() {
   
