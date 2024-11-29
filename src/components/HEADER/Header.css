@@ -1,17 +1,15 @@
 .Header__Container {
+  position: relative;
   z-index: 10;
   width: 100%;
   z-index: 1050;
-  top: -100px;
+  top: 0px;
   transition: top 0.5s ease, opacity 2s ease, transform 2s ease;
   opacity: 0;
   transform: translateY(-50px);
   /* Desplazado hacia arriba al inicio */
 }
-.catalogo__dropdown .scrolled {
-  z-index: 9999;
-  /* Asegura que el dropdown esté siempre visible */
-}
+
 .Header__Container.scrolled {
   top: 0;
   /* Se fija en la parte superior */

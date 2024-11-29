@@ -1,5 +1,7 @@
-.slider{position: relative;
+.slider{
+  position: relative;
   z-index: 1; overflow: visible;}
+
 .slider-item {
   height: 23rem;
   background-size: cover;

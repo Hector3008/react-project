@@ -1,0 +1,28 @@
+/* Número */
+.number {
+  max-width: 300px;
+}
+
+.number .form__placeholder {
+  background-color: rgba(0, 128, 0, 0.028);
+  border-color: rgba(240, 248, 255, 0);
+  border-radius: 5px;
+  font-size: 16px;
+  color: white
+}
+
+/* Cambiar color del placeholder */
+.number .form__placeholder::placeholder {
+  color: rgba(255, 255, 255, 0.535);
+  opacity: 1;
+}
+
+/* Efecto de enfoque en el input */
+.number .form__placeholder:focus {
+  border-color: green;
+
+  outline: none;
+color: white;
+  box-shadow: 0 0 5px green;
+
+}

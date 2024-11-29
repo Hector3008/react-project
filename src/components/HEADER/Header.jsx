@@ -15,44 +15,21 @@ import { Link } from "react-router-dom";
 import Number from "./Number";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [headerHeight, setHeaderHeight] = useState(0);
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    // Guardar la altura del header
-    if (headerRef.current) {
-      setHeaderHeight(headerRef.current.offsetHeight);
-    }
-
-    const handleScroll = () => {
-      if (window.scrollY > 190) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  
 
   return (
     <>
-      <div style={{ height: isScrolled ? `${headerHeight}px` : "0px" }} />
-      <header className={`Header__Container ${isScrolled ? "scrolled" : ""}`}>
+      <header className={`Header__Container`}>
         <ScheduleAd />
         <Navbar expand="lg" className="Naftware">
           <Container>
             <Link to={"/"}>
               <Logo />
             </Link>
-            <Number/>
+
             <ConsultarConFoto />
+
             <Search__Form />
-            <Users clases={"show-on-lg"} />
             <Navbar.Toggle aria-controls="basic-Navb-nav" />
 
             <Navbar.Collapse id="basic-Navb-nav">
@@ -207,7 +184,8 @@ const Header = () => {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <Users clases={"hide-on-lg"} />
+
+            <Number />
           </Container>
         </Navbar>
 

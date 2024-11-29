@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./Number.css"
 import { ContactContext } from "../../context/contactContext"; 
 import Form from "react-bootstrap/Form";
 
@@ -10,11 +11,11 @@ const Number = () => {
   };
 
   return (
-    <Form className="d-flex ms-auto form-container hide-on-lg">
+    <Form className="d-flex ms-auto number">
       
       <Form.Control
         type="text"
-        placeholder="número telefónico"
+        placeholder="número telefónico: "
         className="form__placeholder"
         aria-label="número telefónico"
         onChange={setNumberHandler} 
