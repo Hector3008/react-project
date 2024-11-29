@@ -40,7 +40,7 @@ const Catalog__Container = () => {
     const find = categories.find((e) => e.id == category);
     items = getElements().filter((e) => e.categories.includes(find.title));
   }
-  const [itemsPerPage, setItemsPerPage] = useState(2); // Número de items por página
+  const [itemsPerPage, setItemsPerPage] = useState(6); // Número de items por página
   const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
 
   // Paginación: calcular el índice de inicio y fin
@@ -50,7 +50,7 @@ const Catalog__Container = () => {
 
   // Cambiar de página
   const totalPages = Math.ceil(items.length / itemsPerPage);
-  const pagesLimit = 4
+  const pagesLimit = 10
 
   let renderPages = [];
 //si la cantidad de páginas es menor a 5 se imprimen todas las páginas:
@@ -65,32 +65,26 @@ const Catalog__Container = () => {
   //caso contrario, empieza la casuistica:
   else {
     //si la currentPage es menor a tres, imprimo las 3 primeras páginas y luego la última:
-    if(currentPage<=3){
-      console.log("console.log from ln69");
-      console.log("currentPage: ", currentPage);
-      console.log("currentpage <= 2 (if)", currentPage <= 2); 
-      renderPages = [1,2,3,"...",totalPages]  
-      console.log("renderPages from ln72: ", renderPages);
+    if(currentPage<=4){
+      renderPages = [1,2,3,4,5, "...",totalPages]  
       
     }
     //si la currentPage está entre las 3 últimas, imprimo la primera página y las últimas 3:
-    if(currentPage+2>totalPages) {
-      console.log("console.log from ln78");
-      console.log("currentpage: ", currentPage);
-      console.log("currentPage+2>totalPages", currentPage + 2 > totalPages);
-      renderPages=["1","...",totalPages-2,totalPages-1,totalPages]
-      console.log("renderPages from ln 82: ",renderPages);
+    if(currentPage+4>totalPages) {
+      renderPages=["1","...",totalPages-4, totalPages-3,totalPages-2,totalPages-1,totalPages]
       
     } 
-    //si la currentPage está intermedia, imprimo la primera y la última página junto a las 3 qwue rodean a la currentPage:
-    if (currentPage > 3 && currentPage + 2 <= totalPages) {
+    //si la currentPage está intermedia, imprimo la primera y la última página junto a las 3 que rodean a la currentPage:
+    if (currentPage > 4 && currentPage + 4 <= totalPages) {
       console.log("intermedio");
       renderPages = [
         1,
         "...",
+        currentPage -2,
         currentPage - 1,
         currentPage,
         currentPage + 1,
+        currentPage +2,
         "...",
         totalPages,
       ];
@@ -157,37 +151,31 @@ const Catalog__Container = () => {
               <Col>
                 <Row>
                   <Col className="pagination-buttons text-center">
-                    {/* Botones de paginación */}
-                    {[...Array(totalPages)].map((_, i) => (
-                      <Button
-                        key={i}
-                        variant="outline-primary"
-                        onClick={() => handlePageChange(i + 1)}
-                        active={currentPage === i + 1}
-                      >
-                        {i + 1}
-                      </Button>
-                    ))}
+                    {renderPages.map((e, index) =>
+                      e == "..." ? (
+                        <span
+                          key={e + "renderPagesKey"+index}
+                          style={{ margin: "0 8px" }}
+                        >
+                          {e}
+                        </span>
+                      ) : (
+                        <Button
+                          key={e + "renderPagesKey"}
+                          variant="outline-primary"
+                          onClick={() => handlePageChange(e)}
+                          active={currentPage === e}
+                        >
+                          {e}
+                        </Button>
+                      )
+                    )}
                   </Col>
                 </Row>
 
                 {/* Mostrar los items de la página actual */}
                 <ItemList items={currentItems} />
-                <Row>
-                  <Col className="pagination-buttons text-center">
-                    {/* Botones de paginación */}
-                    {[...Array(totalPages)].map((_, i) => (
-                      <Button
-                        key={i}
-                        variant="outline-primary"
-                        onClick={() => handlePageChange(i + 1)}
-                        active={currentPage === i + 1}
-                      >
-                        {i + 1}
-                      </Button>
-                    ))}
-                  </Col>
-                </Row>
+                
               </Col>
             </Row>
           </Col>
