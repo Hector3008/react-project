@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Search__Form from "./Search__Form";
@@ -9,7 +9,6 @@ import { Nav } from "react-bootstrap";
 import Logo from "./Logo";
 import "./Header.css";
 import "./Search__Form.css";
-import Users from "./Links/Users";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Number from "./Number";

@@ -8,22 +8,29 @@ const Filters = () => {
   const brands = getBrands()
   return (
     <>
-      <h3>filters by category</h3>
-      {categories.map((category) => (
-        <Link key={`Tab-${category.id}`} to={`/catalog/category/${category.id}`}>
-          <li>{category.title}</li>
-        </Link>
-      ))}
-      <h3>filters by brand</h3>
+        <h3 className='title'>CATEGORIAS</h3>
+        {categories.map((category) => (
+          <Link
+            key={`Tab-${category.id}`}
+            to={`/catalog/category/${category.id}`}
+          >
+            <li className="filter-tab">{category.title}</li>
+          </Link>
+        ))}
+
+
+
+      <h3 className='title'>MARCA</h3>
       {brands.map((brand) => (
         <Link key={`tab-${brand}`} to={`/catalog/brand/${brand}`}>
-          <li>{brand}</li>
+          <li className="filter-tab">{brand}</li>
         </Link>
       ))}
-      <h3>filters by keyword</h3>
+
+      <h3 className='title'>CLAVE</h3>
       {keywords.map((keyword) => (
         <Link key={`Tab-${keyword}`} to={`/catalog/keyword/${keyword}`}>
-          <li>{keyword}</li>
+          <li className="filter-tab">{keyword}</li>
         </Link>
       ))}
     </>

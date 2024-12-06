@@ -3,22 +3,19 @@
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(14, 14, 14);
 }
 .couriers-carousel .bi{
   color: #ff8c00;
 }
 .couriers-carousel .title {
   color: #ffffff;
-  margin-bottom: 2rem;
   font-weight: lighter;
-  font-size: 1.2rem;
-  /* Aumenta un poco el tamaño para pantallas grandes */
+  font-size: 1rem;
   margin: auto;
+  margin-bottom: 2rem;
   text-align: center;
-  /* Asegura que el texto esté centrado */
   width: 100%;
-  /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
 /* Media query para pantallas más pequeñas */
@@ -37,7 +34,6 @@
 .react-multi-carousel-list{
   margin: auto;
   margin-top: 1rem;
-  width: 80%;
 }
 .couriers-carousel {
   width: 80%;
@@ -91,8 +87,8 @@
 
 .progress-bar {
   opacity: 0.5;
-  background: linear-gradient(90deg, #ff8c00, #4fbd53de);
-  height: 100%;
+  background: rgb(30, 255, 0);
+  height: 50%;
   transition: width 0.1s linear;
 }
 

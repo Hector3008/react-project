@@ -1,13 +1,14 @@
 /* Número */
 .number {
-  max-width: 300px;
+  width: 8rem;
 }
 
 .number .form__placeholder {
+  width: 100%;
   background-color: rgba(0, 128, 0, 0.028);
   border-color: rgba(240, 248, 255, 0);
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   color: white
 }
 

@@ -1,10 +1,25 @@
 .ItemCard{
     width: 14rem;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.091);
     align-items: center;
     text-align: center;
-    background-color: orangered;
+    background-color: rgb(255, 255, 255);
 }
 .cardImage{width: 10rem;}
+.cotizar{border: 0px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: rgba(79, 189, 83, 0.872);
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    border-radius: 0.2rem;}
+.cotizar:hover{
+    background-color: rgba(255, 68, 0, 0.872);
+        color: white;
+}
+.title{color: #00443b;
+font-weight: bolder;}
+.quick-view{color: white; padding: 0.4rem;  margin: 0%; font-size: 0.7rem; background-color: #00443b; font-weight: bold; border: 0px; border-radius: 0.2rem;}

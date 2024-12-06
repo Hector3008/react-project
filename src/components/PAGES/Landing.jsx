@@ -1,17 +1,19 @@
 import React from 'react'
 import Presentacion from '../SECTION/Presentacion/Presentacion'
 import Curiers from '../SECTION/Curiers/Curiers'
-import Sales from '../SECTION/Sale/Sales'
-//import Starters__and__Componets from '../SECTION/starters/Starters__and__Componets'
+import DashboardContainer from '../SECTION/Dashboards/dashboardContainer'
+import { getElements } from '../../services/utils'
+
 const Landing = () => {
+  
+  const items = getElements()
   return (
     <>
-      <Presentacion/>
-      <Curiers/> 
-      <Sales/>    
-
+      <Presentacion />
+      <Curiers />
+      <DashboardContainer items={items}/>
     </>
-  )
+  );
 }
 
 export default Landing

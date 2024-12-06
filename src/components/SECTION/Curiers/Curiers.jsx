@@ -79,7 +79,7 @@ const Curiers = () => {
             </div>
           ))}
         </Carousel>
-        <div className="progress-bar-container" style={{ width: "20rem" }}>
+        <div className="progress-bar-container" style={{ width: "10rem" }}>
           <div className="progress-bar" style={{ width: `${progress}%` }}></div>
         </div>
       </div>

@@ -6,19 +6,21 @@ import Form from "react-bootstrap/Form";
 const Number = () => {
   const { setNumber } = useContext(ContactContext);
 
-  const setNumberHandler = (event) => {    
+  const setNumberHandler = (event) => { 
     setNumber(event.target.value);
   };
 
   return (
-    <Form className="d-flex ms-auto number">
-      
+    <Form
+      className="d-flex ms-auto number"
+      onSubmit={(event) => event.preventDefault()}
+    >
       <Form.Control
         type="text"
         placeholder="número telefónico: "
         className="form__placeholder"
         aria-label="número telefónico"
-        onChange={setNumberHandler} 
+        onChange={setNumberHandler}
       />
     </Form>
   );

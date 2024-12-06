@@ -1,6 +1,4 @@
-.filters-container{
- background-color: grey; 
+.filters-container{color: black; 
 }
-.filters-bar{
-  background-color: burlywood;
-}
+.itemList{padding-top: 1rem; padding-bottom: 1rem;}
+.catalog{padding-top: 1rem; padding-bottom: 1rem;}

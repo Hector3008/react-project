@@ -3,3 +3,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+.close{background-color: orangered; border: 0px;padding: 0.3rem 1rem 0.3rem 1rem;
+  border-radius: 0.2rem; border: 0px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;}
+.modal-body {
+  text-align: center;
+}
+.buttons{display: flex; justify-content: space-between;}
+

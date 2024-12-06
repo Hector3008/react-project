@@ -20,6 +20,7 @@ const Catalog__Container = () => {
   ) {
     items = getElements();
   }
+  
   if (search != undefined) {
     items = getElements().filter((e) => {
       console.log(e.description);
@@ -40,7 +41,7 @@ const Catalog__Container = () => {
     const find = categories.find((e) => e.id == category);
     items = getElements().filter((e) => e.categories.includes(find.title));
   }
-  const [itemsPerPage, setItemsPerPage] = useState(6); // Número de items por página
+  const [itemsPerPage, setItemsPerPage] = useState(10); // Número de items por página
   const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
 
   // Paginación: calcular el índice de inicio y fin
@@ -101,27 +102,21 @@ const Catalog__Container = () => {
 
   return (
     <>
-      <Container fluid>
+      <Container className="catalog">
         <Row>
+          <Col sm="4" xs="4" md="3" lg="3" xl="2" className="filters-container">
+            <Filters />
+          </Col>
           <Col>
             <Row>
               <Col>
                 <h3>
-                  Página {currentPage} de {totalPages}
+                  página {currentPage} de {totalPages}
                 </h3>
               </Col>
               <Col>
                 <h3>
-                  items per page:
-                  <Button
-                    variant="outline-primary"
-                    onClick={() => {
-                      handlePerPageChange(5);
-                    }}
-                    active={itemsPerPage === 5}
-                  >
-                    5
-                  </Button>
+                  ver por página:{" "}
                   <Button
                     variant="outline-primary"
                     onClick={() => {
@@ -134,27 +129,33 @@ const Catalog__Container = () => {
                   <Button
                     variant="outline-primary"
                     onClick={() => {
-                      handlePerPageChange(20);
+                      handlePerPageChange(25);
                     }}
-                    active={itemsPerPage === 20}
+                    active={itemsPerPage === 25}
                   >
-                    20
+                    25
+                  </Button>
+                  <Button
+                    variant="outline-primary"
+                    onClick={() => {
+                      handlePerPageChange(50);
+                    }}
+                    active={itemsPerPage === 50}
+                  >
+                    50
                   </Button>
                 </h3>
               </Col>
             </Row>
 
             <Row>
-              <Col xs lg="3" className="filters-container">
-                <Filters />
-              </Col>
               <Col>
                 <Row>
                   <Col className="pagination-buttons text-center">
                     {renderPages.map((e, index) =>
                       e == "..." ? (
                         <span
-                          key={e + "renderPagesKey"+index}
+                          key={e + "renderPagesKey" + index}
                           style={{ margin: "0 8px" }}
                         >
                           {e}
@@ -172,10 +173,32 @@ const Catalog__Container = () => {
                     )}
                   </Col>
                 </Row>
-
-                {/* Mostrar los items de la página actual */}
-                <ItemList items={currentItems} />
-                
+                <Row className="itemList">
+                  <ItemList items={currentItems} />
+                </Row>
+                <Row>
+                  <Col className="pagination-buttons text-center">
+                    {renderPages.map((e, index) =>
+                      e == "..." ? (
+                        <span
+                          key={e + "renderPagesKey" + index}
+                          style={{ margin: "0 8px" }}
+                        >
+                          {e}
+                        </span>
+                      ) : (
+                        <Button
+                          key={e + "renderPagesKey"}
+                          variant="outline-primary"
+                          onClick={() => handlePageChange(e)}
+                          active={currentPage === e}
+                        >
+                          {e}
+                        </Button>
+                      )
+                    )}
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Col>
