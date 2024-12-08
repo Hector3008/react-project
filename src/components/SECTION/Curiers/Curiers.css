@@ -2,8 +2,7 @@
   position: relative;
   width: 100%;
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: rgb(14, 14, 14);
+  background-color: rgb(230, 61, 0)
 }
 .couriers-carousel .bi{
   color: #ff8c00;
@@ -13,7 +12,7 @@
   font-weight: lighter;
   font-size: 1rem;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   width: 100%;
 }
@@ -76,21 +75,7 @@
   /* Aumenta el zoom al pasar el mouse, haciendo la animación más evidente */
 }
 
-.progress-bar-container {
-  margin: auto;
-  margin-bottom: 1rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  height: 0.2rem;
-  width: 100%;
-}
 
-.progress-bar {
-  opacity: 0.5;
-  background: rgb(30, 255, 0);
-  height: 50%;
-  transition: width 0.1s linear;
-}
 
 @keyframes slide {
   0% {

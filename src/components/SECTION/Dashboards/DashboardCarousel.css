@@ -1,0 +1,16 @@
+.card-carousel{width: 92%;
+  margin: 0.2rem; overflow-wrap: break-word;}
+.card-carousel .buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.dashboard button{
+    margin: 0.2rem; background-color: rgb(255, 68, 0);
+      border: 0px;
+      border-radius: 0.2rem;
+      box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.091);
+  }
+  .dashboard button:hover {background-color: rgb(206, 55, 0);
+  }
+  .dashboard .img{width: 100%;}

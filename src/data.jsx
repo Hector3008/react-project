@@ -472,6 +472,7 @@ export const keywords = [
   "bosch",
   "oem",
   "sku",
+  "vacio"
   ];
 
 export const brands = [
